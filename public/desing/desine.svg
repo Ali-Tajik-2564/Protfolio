@@ -1,0 +1,577 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 3200" width="1440" height="3200">
+  
+  <defs>
+    <!-- ============================================ -->
+    <!-- CHARCOAL & PURPLE COLOR SYSTEM              -->
+    <!-- ============================================ -->
+    
+    <!-- Main Background - Charcoal Black -->
+    <linearGradient id="bgCharcoal" x1="0" y1="0" x2="100" y2="100">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="50%" stop-color="#121212"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </linearGradient>
+    
+    <!-- Surface / Card Background -->
+    <linearGradient id="surfaceDark" x1="0" y1="0" x2="100" y2="100">
+      <stop offset="0%" stop-color="#242424" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#1A1A1A" stop-opacity="0.95"/>
+    </linearGradient>
+    
+    <!-- Glassmorphism Effect -->
+    <linearGradient id="glassEffect" x1="0" y1="0" x2="100" y2="100">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+    
+    <!-- Purple Accent Gradient -->
+    <linearGradient id="purpleAccent" x1="0" y1="0" x2="100" y2="100">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    
+    <!-- Purple Gradient Dark -->
+    <linearGradient id="purpleDark" x1="0" y1="0" x2="100" y2="100">
+      <stop offset="0%" stop-color="#4C1D95"/>
+      <stop offset="100%" stop-color="#5B21B6"/>
+    </linearGradient>
+    
+    <!-- ============================================ -->
+    <!-- FILTERS & EFFECTS                           -->
+    <!-- ============================================ -->
+    
+    <filter id="glassBlur">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="shadowPurple">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#7C3AED" flood-opacity="0.25"/>
+    </filter>
+    
+    <filter id="shadowDark">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    
+    <filter id="glowPurple">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- ============================================ -->
+    <!-- PATTERNS                                    -->
+    <!-- ============================================ -->
+    
+    <pattern id="gridDots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="16" r="1.2" fill="#7C3AED" fill-opacity="0.12"/>
+      <circle cx="0" cy="0" r="0.8" fill="#A78BFA" fill-opacity="0.08"/>
+      <circle cx="32" cy="32" r="0.8" fill="#A78BFA" fill-opacity="0.08"/>
+    </pattern>
+    
+    <pattern id="gridLines" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#7C3AED" stroke-width="0.3" stroke-opacity="0.06"/>
+    </pattern>
+    
+    <!-- ============================================ -->
+    <!-- TYPOGRAPHY SYSTEM                           -->
+    <!-- ============================================ -->
+    <style>
+      .h1 {
+        font-family: 'Cal Sans', 'Inter', system-ui, sans-serif;
+        font-size: 80px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+      }
+      .h2 {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+      }
+      .h3 {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 1.3;
+      }
+      .h4 {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 1.4;
+      }
+      .body {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 1.6;
+      }
+      .bodySmall {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 1.5;
+      }
+      .caption {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        line-height: 1.4;
+      }
+      .mono {
+        font-family: 'JetBrains Mono', 'Fira Code', monospace;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0;
+      }
+    </style>
+  </defs>
+
+  <!-- ============================================ -->
+  <!-- ARTBOARD - CHARCOAL BACKGROUND               -->
+  <!-- ============================================ -->
+  <rect width="1440" height="3200" fill="url(#bgCharcoal)"/>
+  <rect width="1440" height="3200" fill="url(#gridDots)"/>
+  <rect width="1440" height="3200" fill="url(#gridLines)"/>
+
+  <!-- ============================================ -->
+  <!-- TOP DESIGN BAR (Figma Style)                 -->
+  <!-- ============================================ -->
+  <g transform="translate(0, 0)">
+    <rect x="0" y="0" width="1440" height="56" fill="#121212" fill-opacity="0.98"/>
+    <rect x="0" y="55" width="1440" height="1" fill="#7C3AED" fill-opacity="0.3"/>
+    
+    <!-- Artboard Info -->
+    <rect x="20" y="12" width="8" height="8" rx="2" fill="#A78BFA"/>
+    <text x="36" y="22" class="caption" fill="#A78BFA">CHARCOAL DESIGN</text>
+    
+    <text x="180" y="22" class="caption" fill="#52525B">|</text>
+    <text x="200" y="22" class="caption" fill="#71717A">Artboard: 1440 × 3200</text>
+    
+    <text x="380" y="22" class="caption" fill="#52525B">|</text>
+    <text x="400" y="22" class="caption" fill="#71717A">Theme: Charcoal + Purple</text>
+    
+    <!-- Color Preview -->
+    <rect x="580" y="14" width="28" height="28" rx="6" fill="#1A1A1A" stroke="#7C3AED" stroke-width="1.5"/>
+    <rect x="614" y="14" width="28" height="28" rx="6" fill="#7C3AED"/>
+    <rect x="648" y="14" width="28" height="28" rx="6" fill="#A78BFA"/>
+    
+    <!-- Export Button -->
+    <rect x="1280" y="12" width="80" height="32" rx="8" fill="#7C3AED" fill-opacity="0.15" stroke="#7C3AED" stroke-width="1"/>
+    <text x="1320" y="32" class="caption" fill="#A78BFA" text-anchor="middle">Export</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- SECTION 1: HERO (Inspired by dev-1.png & Gemini) -->
+  <!-- ============================================ -->
+  <g transform="translate(0, 56)">
+    <!-- Hero Container -->
+    <rect x="80" y="40" width="1280" height="520" rx="24" fill="url(#glassEffect)" stroke="#7C3AED" stroke-width="0.8" stroke-opacity="0.2"/>
+    
+    <!-- Purple Glow Behind Name -->
+    <ellipse cx="720" cy="160" rx="350" ry="60" fill="#7C3AED" fill-opacity="0.08" filter="url(#glowPurple)"/>
+    
+    <!-- Name - Large & Bold like dev-1.png -->
+    <text x="720" y="150" class="h1" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.02">امیرحسین دوستی</text>
+    
+    <!-- Tagline with Purple -->
+    <text x="720" y="220" class="h2" fill="url(#purpleAccent)" text-anchor="middle" font-size="42">Your go-to engineer for Next.js</text>
+    
+    <!-- Description -->
+    <text x="720" y="280" class="body" fill="#A1A1AA" text-anchor="middle">توسعه‌دهنده حرفه‌ای فرانت‌اند با تخصص در Next.js و React</text>
+    <text x="720" y="308" class="body" fill="#A1A1AA" text-anchor="middle">ساخت تجربه‌های کاربری روان، مدرن و مقیاس‌پذیر</text>
+    
+    <!-- Stats Cards (Glass) -->
+    <g transform="translate(320, 360)">
+      <!-- Stat 1 -->
+      <rect x="0" y="0" width="160" height="70" rx="12" fill="url(#glassEffect)" stroke="#7C3AED" stroke-width="0.5"/>
+      <text x="80" y="32" class="h3" fill="#A78BFA" text-anchor="middle" font-size="32">۵+</text>
+      <text x="80" y="55" class="caption" fill="#71717A" text-anchor="middle">سال تجربه</text>
+      
+      <!-- Stat 2 -->
+      <rect x="180" y="0" width="160" height="70" rx="12" fill="url(#glassEffect)" stroke="#7C3AED" stroke-width="0.5"/>
+      <text x="260" y="32" class="h3" fill="#A78BFA" text-anchor="middle" font-size="32">۳۰+</text>
+      <text x="260" y="55" class="caption" fill="#71717A" text-anchor="middle">پروژه موفق</text>
+      
+      <!-- Stat 3 -->
+      <rect x="360" y="0" width="160" height="70" rx="12" fill="url(#glassEffect)" stroke="#7C3AED" stroke-width="0.5"/>
+      <text x="440" y="32" class="h3" fill="#A78BFA" text-anchor="middle" font-size="32">۵۰+</text>
+      <text x="440" y="55" class="caption" fill="#71717A" text-anchor="middle">مشتری راضی</text>
+    </g>
+    
+    <!-- CTA Buttons -->
+    <g transform="translate(450, 470)">
+      <!-- Primary Button -->
+      <rect x="0" y="0" width="180" height="52" rx="26" fill="url(#purpleAccent)" filter="url(#shadowPurple)"/>
+      <text x="90" y="33" class="body" fill="#FFFFFF" font-weight="600" text-anchor="middle">تماس با من</text>
+      
+      <!-- Secondary Button -->
+      <rect x="200" y="0" width="200" height="52" rx="26" fill="none" stroke="#8B5CF6" stroke-width="1.5"/>
+      <text x="300" y="33" class="body" fill="#A78BFA" font-weight="600" text-anchor="middle">مشاهده پروژه‌ها →</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- SECTION 2: SKILLS (Inspired by 6643b605.png) -->
+  <!-- ============================================ -->
+  <g transform="translate(0, 620)">
+    <rect x="80" y="0" width="1280" height="520" rx="24" fill="url(#glassEffect)" stroke="#7C3AED" stroke-width="0.8" stroke-opacity="0.2"/>
+    
+    <!-- Section Header -->
+    <text x="720" y="60" class="h2" fill="#FFFFFF" text-anchor="middle">مهارت‌های تخصصی</text>
+    <rect x="640" y="75" width="160" height="3" rx="1.5" fill="url(#purpleAccent)"/>
+    
+    <!-- Skills Tags Grid -->
+    <g transform="translate(100, 110)">
+      <!-- Row 1 -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="115" height="48" rx="24" fill="#1A1A1A" stroke="#7C3AED" stroke-width="0.8"/>
+        <text x="57" y="30" class="body" fill="#FFFFFF" text-anchor="middle">React</text>
+        
+        <rect x="130" y="0" width="125" height="48" rx="24" fill="#1A1A1A" stroke="#8B5CF6" stroke-width="0.8"/>
+        <text x="192" y="30" class="body" fill="#FFFFFF" text-anchor="middle">Next.js</text>
+        
+        <rect x="270" y="0" width="130" height="48" rx="24" fill="#1A1A1A" stroke="#A78BFA" stroke-width="0.8"/>
+        <text x="335" y="30" class="body" fill="#FFFFFF" text-anchor="middle">TypeScript</text>
+        
+        <rect x="415" y="0" width="135" height="48" rx="24" fill="#1A1A1A" stroke="#7C3AED" stroke-width="0.8"/>
+        <text x="482" y="30" class="body" fill="#FFFFFF" text-anchor="middle">Tailwind CSS</text>
+        
+        <rect x="565" y="0" width="150" height="48" rx="24" fill="#1A1A1A" stroke="#8B5CF6" stroke-width="0.8"/>
+        <text x="640" y="30" class="body" fill="#FFFFFF" text-anchor="middle">Framer Motion</text>
+      </g>
+      
+      <!-- Row 2 -->
+      <g transform="translate(0, 68)">
+        <rect x="0" y="0" width="120" height="48" rx="24" fill="#1A1A1A" stroke="#A78BFA" stroke-width="0.8"/>
+        <text x="60" y="30" class="body" fill="#FFFFFF" text-anchor="middle">Node.js</text>
+        
+        <rect x="135" y="0" width="125" height="48" rx="24" fill="#1A1A1A" stroke="#7C3AED" stroke-width="0.8"/>
+        <text x="197" y="30" class="body" fill="#FFFFFF" text-anchor="middle">NestJS</text>
+        
+        <rect x="275" y="0" width="115" height="48" rx="24" fill="#1A1A1A" stroke="#8B5CF6" stroke-width="0.8"/>
+        <text x="332" y="30" class="body" fill="#FFFFFF" text-anchor="middle">Python</text>
+        
+        <rect x="405" y="0" width="100" height="48" rx="24" fill="#1A1A1A" stroke="#A78BFA" stroke-width="0.8"/>
+        <text x="455" y="30" class="body" fill="#FFFFFF" text-anchor="middle">Go</text>
+        
+        <rect x="520" y="0" width="140" height="48" rx="24" fill="#1A1A1A" stroke="#7C3AED" stroke-width="0.8"/>
+        <text x="590" y="30" class="body" fill="#FFFFFF" text-anchor="middle">PostgreSQL</text>
+      </g>
+      
+      <!-- Row 3 -->
+      <g transform="translate(0, 136)">
+        <rect x="0" y="0" width="115" height="48" rx="24" fill="#1A1A1A" stroke="#8B5CF6" stroke-width="0.8"/>
+        <text x="57" y="30" class="body" fill="#FFFFFF" text-anchor="middle">Prisma</text>
+        
+        <rect x="130" y="0" width="125" height="48" rx="24" fill="#1A1A1A" stroke="#A78BFA" stroke-width="0.8"/>
+        <text x="192" y="30" class="body" fill="#FFFFFF" text-anchor="middle">Docker</text>
+        
+        <rect x="270" y="0" width="95" height="48" rx="24" fill="#1A1A1A" stroke="#7C3AED" stroke-width="0.8"/>
+        <text x="317" y="30" class="body" fill="#FFFFFF" text-anchor="middle">Git</text>
+        
+        <rect x="380" y="0" width="115" height="48" rx="24" fill="#1A1A1A" stroke="#8B5CF6" stroke-width="0.8"/>
+        <text x="437" y="30" class="body" fill="#FFFFFF" text-anchor="middle">Linux</text>
+        
+        <rect x="510" y="0" width="140" height="48" rx="24" fill="#1A1A1A" stroke="#A78BFA" stroke-width="0.8"/>
+        <text x="580" y="30" class="body" fill="#FFFFFF" text-anchor="middle">REST API</text>
+      </row>
+    </g>
+    
+    <!-- Skills Note -->
+    <text x="720" y="480" class="caption" fill="#52525B" text-anchor="middle">هر مهارت یک برچسب با هاور افکت بنفش</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- SECTION 3: PROJECTS (Grid Layout)            -->
+  <!-- ============================================ -->
+  <g transform="translate(0, 1180)">
+    <rect x="80" y="0" width="1280" height="560" rx="24" fill="url(#glassEffect)" stroke="#7C3AED" stroke-width="0.8" stroke-opacity="0.2"/>
+    
+    <text x="720" y="60" class="h2" fill="#FFFFFF" text-anchor="middle">پروژه‌های من</text>
+    <rect x="640" y="75" width="160" height="3" rx="1.5" fill="url(#purpleAccent)"/>
+    
+    <!-- Project Card 1 -->
+    <g transform="translate(100, 110)">
+      <rect x="0" y="0" width="350" height="380" rx="20" fill="#1A1A1A" stroke="#7C3AED" stroke-width="0.8" filter="url(#shadowDark)"/>
+      
+      <!-- Image Placeholder -->
+      <rect x="20" y="20" width="310" height="160" rx="12" fill="#242424"/>
+      <text x="175" y="105" class="body" fill="#7C3AED" fill-opacity="0.3" text-anchor="middle">Project Image</text>
+      
+      <!-- Tech Tags -->
+      <rect x="20" y="195" width="75" height="28" rx="14" fill="#7C3AED" fill-opacity="0.15"/>
+      <text x="57" y="214" class="caption" fill="#A78BFA" text-anchor="middle">Next.js</text>
+      
+      <rect x="105" y="195" width="90" height="28" rx="14" fill="#8B5CF6" fill-opacity="0.15"/>
+      <text x="150" y="214" class="caption" fill="#A78BFA" text-anchor="middle">TypeScript</text>
+      
+      <!-- Title & Description -->
+      <text x="20" y="260" class="h4" fill="#FFFFFF">داشبورد مدیریت پیشرفته</text>
+      <text x="20" y="290" class="bodySmall" fill="#A1A1AA">پلتفرم مدیریت محتوای مدرن</text>
+      <text x="20" y="314" class="bodySmall" fill="#A1A1AA">با قابلیت تحلیل داده و گزارش‌گیری</text>
+      
+      <!-- Link -->
+      <text x="20" y="355" class="bodySmall" fill="#A78BFA">مشاهده پروژه →</text>
+    </g>
+    
+    <!-- Project Card 2 -->
+    <g transform="translate(485, 110)">
+      <rect x="0" y="0" width="350" height="380" rx="20" fill="#1A1A1A" stroke="#8B5CF6" stroke-width="0.8" filter="url(#shadowDark)"/>
+      
+      <rect x="20" y="20" width="310" height="160" rx="12" fill="#242424"/>
+      <text x="175" y="105" class="body" fill="#8B5CF6" fill-opacity="0.3" text-anchor="middle">Project Image</text>
+      
+      <rect x="20" y="195" width="95" height="28" rx="14" fill="#8B5CF6" fill-opacity="0.15"/>
+      <text x="67" y="214" class="caption" fill="#A78BFA" text-anchor="middle">React Native</text>
+      
+      <rect x="125" y="195" width="75" height="28" rx="14" fill="#7C3AED" fill-opacity="0.15"/>
+      <text x="162" y="214" class="caption" fill="#A78BFA" text-anchor="middle">Node.js</text>
+      
+      <text x="20" y="260" class="h4" fill="#FFFFFF">اپلیکیشن موبایل فروشگاهی</text>
+      <text x="20" y="290" class="bodySmall" fill="#A1A1AA">اپلیکیشن کراس‌پلتفرم با قابلیت</text>
+      <text x="20" y="314" class="bodySmall" fill="#A1A1AA">پرداخت آنلاین و اعلانات پوش</text>
+      
+      <text x="20" y="355" class="bodySmall" fill="#A78BFA">مشاهده پروژه →</text>
+    </g>
+    
+    <!-- Project Card 3 -->
+    <g transform="translate(870, 110)">
+      <rect x="0" y="0" width="350" height="380" rx="20" fill="#1A1A1A" stroke="#A78BFA" stroke-width="0.8" filter="url(#shadowDark)"/>
+      
+      <rect x="20" y="20" width="310" height="160" rx="12" fill="#242424"/>
+      <text x="175" y="105" class="body" fill="#A78BFA" fill-opacity="0.3" text-anchor="middle">Project Image</text>
+      
+      <rect x="20" y="195" width="85" height="28" rx="14" fill="#A78BFA" fill-opacity="0.15"/>
+      <text x="62" y="214" class="caption" fill="#A78BFA" text-anchor="middle">Python</text>
+      
+      <rect x="115" y="195" width="90" height="28" rx="14" fill="#8B5CF6" fill-opacity="0.15"/>
+      <text x="160" y="214" class="caption" fill="#A78BFA" text-anchor="middle">Django</text>
+      
+      <text x="20" y="260" class="h4" fill="#FFFFFF">سیستم تحلیل داده هوشمند</text>
+      <text x="20" y="290" class="bodySmall" fill="#A1A1AA">داشبورد تحلیلی برای</text>
+      <text x="20" y="314" class="bodySmall" fill="#A1A1AA">تصمیم‌گیری هوشمند سازمانی</text>
+      
+      <text x="20" y="355" class="bodySmall" fill="#A78BFA">مشاهده پروژه →</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- SECTION 4: TIMELINE (Inspired by 1280w-g6q7GxbL5-M.webp) -->
+  <!-- ============================================ -->
+  <g transform="translate(0, 1780)">
+    <rect x="80" y="0" width="1280" height="520" rx="24" fill="url(#glassEffect)" stroke="#7C3AED" stroke-width="0.8" stroke-opacity="0.2"/>
+    
+    <text x="720" y="60" class="h2" fill="#FFFFFF" text-anchor="middle">مسیر حرفه‌ای</text>
+    <rect x="640" y="75" width="160" height="3" rx="1.5" fill="url(#purpleAccent)"/>
+    
+    <!-- Horizontal Timeline Cards -->
+    <g transform="translate(100, 120)">
+      <!-- Card 1 -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="350" height="320" rx="20" fill="#1A1A1A" stroke="#7C3AED" stroke-width="0.8"/>
+        
+        <!-- Year Badge -->
+        <rect x="20" y="20" width="100" height="32" rx="16" fill="#7C3AED" fill-opacity="0.15"/>
+        <text x="70" y="41" class="body" fill="#A78BFA" text-anchor="middle" font-weight="600">۱۴۰۲ - اکنون</text>
+        
+        <!-- Title -->
+        <text x="20" y="85" class="h4" fill="#FFFFFF">توسعه‌دهنده ارشد</text>
+        <text x="20" y="115" class="h4" fill="#A78BFA" font-size="16">فرانت‌اند</text>
+        
+        <!-- Description -->
+        <text x="20" y="155" class="bodySmall" fill="#A1A1AA">شرکت تک‌راهکار</text>
+        <text x="20" y="185" class="bodySmall" fill="#71717A">توسعه اپلیکیشن‌های مقیاس‌پذیر</text>
+        <text x="20" y="210" class="bodySmall" fill="#71717A">با Next.js و TypeScript</text>
+        
+        <!-- Tech used -->
+        <g transform="translate(20, 250)">
+          <rect x="0" y="0" width="60" height="24" rx="12" fill="#242424"/>
+          <text x="30" y="16" class="caption" fill="#A78BFA" text-anchor="middle">Next</text>
+          <rect x="68" y="0" width="70" height="24" rx="12" fill="#242424"/>
+          <text x="103" y="16" class="caption" fill="#A78BFA" text-anchor="middle">TypeScript</text>
+          <rect x="146" y="0" width="65" height="24" rx="12" fill="#242424"/>
+          <text x="178" y="16" class="caption" fill="#A78BFA" text-anchor="middle">Tailwind</text>
+        </g>
+      </g>
+      
+      <!-- Card 2 -->
+      <g transform="translate(380, 0)">
+        <rect x="0" y="0" width="350" height="320" rx="20" fill="#1A1A1A" stroke="#8B5CF6" stroke-width="0.8"/>
+        
+        <rect x="20" y="20" width="100" height="32" rx="16" fill="#8B5CF6" fill-opacity="0.15"/>
+        <text x="70" y="41" class="body" fill="#A78BFA" text-anchor="middle" font-weight="600">۱۴۰۰ - ۱۴۰۲</text>
+        
+        <text x="20" y="85" class="h4" fill="#FFFFFF">توسعه‌دهنده فول‌استک</text>
+        <text x="20" y="115" class="h4" fill="#A78BFA" font-size="16">استارتاپ فناپ</text>
+        
+        <text x="20" y="155" class="bodySmall" fill="#A1A1AA">طراحی و پیاده‌سازی</text>
+        <text x="20" y="185" class="bodySmall" fill="#71717A">سیستم‌های بک‌اند با</text>
+        <text x="20" y="210" class="bodySmall" fill="#71717A">Node.js و NestJS</text>
+        
+        <g transform="translate(20, 250)">
+          <rect x="0" y="0" width="65" height="24" rx="12" fill="#242424"/>
+          <text x="32" y="16" class="caption" fill="#A78BFA" text-anchor="middle">Node</text>
+          <rect x="73" y="0" width="65" height="24" rx="12" fill="#242424"/>
+          <text x="105" y="16" class="caption" fill="#A78BFA" text-anchor="middle">NestJS</text>
+          <rect x="146" y="0" width="75" height="24" rx="12" fill="#242424"/>
+          <text x="183" y="16" class="caption" fill="#A78BFA" text-anchor="middle">Postgres</text>
+        </g>
+      </g>
+      
+      <!-- Card 3 -->
+      <g transform="translate(760, 0)">
+        <rect x="0" y="0" width="350" height="320" rx="20" fill="#1A1A1A" stroke="#A78BFA" stroke-width="0.8"/>
+        
+        <rect x="20" y="20" width="100" height="32" rx="16" fill="#A78BFA" fill-opacity="0.15"/>
+        <text x="70" y="41" class="body" fill="#A78BFA" text-anchor="middle" font-weight="600">۱۳۹۸ - ۱۴۰۰</text>
+        
+        <text x="20" y="85" class="h4" fill="#FFFFFF">کارآموز برنامه‌نویسی</text>
+        <text x="20" y="115" class="h4" fill="#A78BFA" font-size="16">آکادمی رایان</text>
+        
+        <text x="20" y="155" class="bodySmall" fill="#A1A1AA">آموزش و پیاده‌سازی</text>
+        <text x="20" y="185" class="bodySmall" fill="#71717A">پروژه‌های واقعی با</text>
+        <text x="20" y="210" class="bodySmall" fill="#71717A">React و Node.js</text>
+        
+        <g transform="translate(20, 250)">
+          <rect x="0" y="0" width="60" height="24" rx="12" fill="#242424"/>
+          <text x="30" y="16" class="caption" fill="#A78BFA" text-anchor="middle">React</text>
+          <rect x="68" y="0" width="55" height="24" rx="12" fill="#242424"/>
+          <text x="95" y="16" class="caption" fill="#A78BFA" text-anchor="middle">JS</text>
+          <rect x="131" y="0" width="65" height="24" rx="12" fill="#242424"/>
+          <text x="163" y="16" class="caption" fill="#A78BFA" text-anchor="middle">Mongo</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- SECTION 5: CONTACT + FOOTER                  -->
+  <!-- ============================================ -->
+  <g transform="translate(0, 2340)">
+    <rect x="80" y="0" width="1280" height="480" rx="24" fill="url(#glassEffect)" stroke="#7C3AED" stroke-width="0.8" stroke-opacity="0.2"/>
+    
+    <text x="720" y="60" class="h2" fill="#FFFFFF" text-anchor="middle">ارتباط با من</text>
+    <rect x="640" y="75" width="160" height="3" rx="1.5" fill="url(#purpleAccent)"/>
+    
+    <!-- Contact Form -->
+    <g transform="translate(100, 110)">
+      <!-- Name Field -->
+      <text x="0" y="0" class="caption" fill="#A1A1AA">نام کامل</text>
+      <rect x="0" y="12" width="520" height="48" rx="12" fill="#121212" stroke="#7C3AED" stroke-width="0.8"/>
+      <text x="16" y="42" class="bodySmall" fill="#52525B">نام شما...</text>
+      
+      <!-- Email Field -->
+      <text x="0" y="85" class="caption" fill="#A1A1AA">آدرس ایمیل</text>
+      <rect x="0" y="97" width="520" height="48" rx="12" fill="#121212" stroke="#7C3AED" stroke-width="0.8"/>
+      <text x="16" y="127" class="bodySmall" fill="#52525B">example@email.com</text>
+      
+      <!-- Message Field -->
+      <text x="0" y="170" class="caption" fill="#A1A1AA">متن پیام</text>
+      <rect x="0" y="182" width="520" height="100" rx="12" fill="#121212" stroke="#7C3AED" stroke-width="0.8"/>
+      <text x="16" y="215" class="bodySmall" fill="#52525B">پیام خود را بنویسید...</text>
+      
+      <!-- Submit Button -->
+      <rect x="0" y="305" width="520" height="52" rx="26" fill="url(#purpleAccent)" filter="url(#shadowPurple)"/>
+      <text x="260" y="337" class="body" fill="#FFFFFF" font-weight="600" text-anchor="middle">ارسال پیام ✨</text>
+    </g>
+    
+    <!-- Contact Info -->
+    <g transform="translate(680, 110)">
+      <text x="0" y="20" class="h4" fill="#FFFFFF">اطلاعات تماس</text>
+      
+      <g transform="translate(0, 50)">
+        <rect x="0" y="0" width="44" height="44" rx="22" fill="#7C3AED" fill-opacity="0.15"/>
+        <text x="22" y="28" class="body" fill="#A78BFA" text-anchor="middle">📧</text>
+        <text x="60" y="28" class="bodySmall" fill="#A1A1AA">amirhosein@example.com</text>
+      </g>
+      
+      <g transform="translate(0, 110)">
+        <rect x="0" y="0" width="44" height="44" rx="22" fill="#8B5CF6" fill-opacity="0.15"/>
+        <text x="22" y="28" class="body" fill="#A78BFA" text-anchor="middle">🐙</text>
+        <text x="60" y="28" class="bodySmall" fill="#A1A1AA">github.com/amirhosein</text>
+      </g>
+      
+      <g transform="translate(0, 170)">
+        <rect x="0" y="0" width="44" height="44" rx="22" fill="#A78BFA" fill-opacity="0.15"/>
+        <text x="22" y="28" class="body" fill="#A78BFA" text-anchor="middle">🔗</text>
+        <text x="60" y="28" class="bodySmall" fill="#A1A1AA">linkedin.com/in/amirhosein</text>
+      </g>
+      
+      <g transform="translate(0, 230)">
+        <rect x="0" y="0" width="44" height="44" rx="22" fill="#7C3AED" fill-opacity="0.15"/>
+        <text x="22" y="28" class="body" fill="#A78BFA" text-anchor="middle">🐦</text>
+        <text x="60" y="28" class="bodySmall" fill="#A1A1AA">@amirhosein_dev</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <g transform="translate(0, 2860)">
+    <rect x="80" y="0" width="1280" height="120" rx="24" fill="url(#glassEffect)" stroke="#7C3AED" stroke-width="0.8" stroke-opacity="0.2"/>
+    
+    <!-- Divider -->
+    <rect x="40" y="0" width="1200" height="1" fill="#7C3AED" fill-opacity="0.15"/>
+    
+    <!-- Social Icons -->
+    <g transform="translate(560, 25)">
+      <rect x="0" y="0" width="36" height="36" rx="18" fill="#1A1A1A" stroke="#7C3AED" stroke-width="0.8"/>
+      <text x="18" y="24" class="body" fill="#A78BFA" text-anchor="middle">📧</text>
+      
+      <rect x="46" y="0" width="36" height="36" rx="18" fill="#1A1A1A" stroke="#8B5CF6" stroke-width="0.8"/>
+      <text x="64" y="24" class="body" fill="#A78BFA" text-anchor="middle">🐙</text>
+      
+      <rect x="92" y="0" width="36" height="36" rx="18" fill="#1A1A1A" stroke="#A78BFA" stroke-width="0.8"/>
+      <text x="110" y="24" class="body" fill="#A78BFA" text-anchor="middle">🔗</text>
+      
+      <rect x="138" y="0" width="36" height="36" rx="18" fill="#1A1A1A" stroke="#7C3AED" stroke-width="0.8"/>
+      <text x="156" y="24" class="body" fill="#A78BFA" text-anchor="middle">🐦</text>
+    </g>
+    
+    <!-- Copyright -->
+    <text x="720" y="85" class="caption" fill="#52525B" text-anchor="middle">© ۲۰۲۶ امیرحسین دوستی - تمامی حقوق محفوظ است</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- DESIGN SPECIFICATIONS PANEL                  -->
+  <!-- ============================================ -->
+  <g transform="translate(80, 3000)">
+    <rect x="0" y="0" width="1280" height="140" rx="16" fill="#121212" stroke="#7C3AED" stroke-width="0.8"/>
+    
+    <text x="30" y="30" class="caption" fill="#A78BFA" font-weight="600">DESIGN SPECIFICATIONS</text>
+    
+    <g transform="translate(30, 50)">
+      <text x="0" y="0" class="caption" fill="#71717A">Colors:</text>
+      <rect x="60" y="-6" width="16" height="16" rx="4" fill="#1A1A1A" stroke="#7C3AED" stroke-width="1"/>
+      <text x="84" y="4" class="caption" fill="#71717A">#1A1A1A (Charcoal)</text>
+      
+      <rect x="210" y="-6" width="16" height="16" rx="4" fill="#7C3AED"/>
+      <text x="234" y="4" class="caption" fill="#71717A">#7C3AED (Purple)</text>
+      
+      <rect x="340" y="-6" width="16" height="16" rx="4" fill="#A78BFA"/>
+      <text x="364" y="4" class="caption" fill="#71717A">#A78BFA (Light Purple)</text>
+      
+      <text x="0" y="30" class="caption" fill="#71717A">Typography:</text>
+      <text x="80" y="30" class="caption" fill="#71717A">H1: 80px | H2: 48px | H3: 24px | Body: 16px</text>
+      
+      <text x="0" y="55" class="caption" fill="#71717A">Spacing:</text>
+      <text x="80" y="55" class="caption" fill="#71717A">Container: 1280px | Gutter: 24px | Radius: 20px/24px</text>
+    </g>
+  </g>
+
+</svg>

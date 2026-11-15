@@ -1,0 +1,303 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 780" width="1440" height="780">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgSection" x1="0" y1="0" x2="0" y2="100">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#121212"/>
+    </linearGradient>
+
+    <!-- Purple Accent Gradient -->
+    <linearGradient id="purpleAccent" x1="0" y1="0" x2="100" y2="0">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+
+    <!-- Blue Accent Gradient -->
+    <linearGradient id="blueAccent" x1="0" y1="0" x2="100" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#7DD3FC"/>
+    </linearGradient>
+
+    <!-- Card Background -->
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="100">
+      <stop offset="0%" stop-color="#242424" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#1A1A1A" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Image Overlay Gradient -->
+    <linearGradient id="imageOverlay" x1="0" y1="0" x2="0" y2="100">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glowPurple">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="shadowCard">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#7C3AED" flood-opacity="0.12"/>
+    </filter>
+
+    <filter id="shadowHover">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#7C3AED" flood-opacity="0.25"/>
+    </filter>
+
+    <filter id="tagGlow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#7C3AED" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- ============================================ -->
+  <!-- SECTION BACKGROUND                           -->
+  <!-- ============================================ -->
+  <rect width="1440" height="780" fill="url(#bgSection)"/>
+
+  <!-- Ambient Glows -->
+  <ellipse cx="720" cy="390" rx="500" ry="350" fill="#7C3AED" fill-opacity="0.03" filter="url(#glowPurple)"/>
+  <ellipse cx="200" cy="200" rx="250" ry="200" fill="#38BDF8" fill-opacity="0.02" filter="url(#glowPurple)"/>
+  <ellipse cx="1240" cy="600" rx="250" ry="200" fill="#A78BFA" fill-opacity="0.02" filter="url(#glowPurple)"/>
+
+  <!-- ============================================ -->
+  <!-- SECTION HEADER                               -->
+  <!-- ============================================ -->
+  <g transform="translate(720, 50)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.6s" fill="freeze"/>
+    
+    <text x="0" y="0" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#A78BFA" text-anchor="middle" letter-spacing="2">FEATURED PROJECTS</text>
+    
+    <text x="0" y="45" font-family="'Cal Sans', 'Inter', sans-serif" font-size="48" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.01">
+      پروژه‌های من
+    </text>
+    
+    <rect x="-40" y="65" width="80" height="3" rx="1.5" fill="url(#purpleAccent)"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- PROJECT CARD 1                               -->
+  <!-- ============================================ -->
+  <g transform="translate(80, 140)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.5s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="80 160" to="80 140" begin="0.3s" dur="0.5s" fill="freeze"/>
+
+    <rect x="0" y="0" width="400" height="520" rx="20" fill="url(#cardBg)" stroke="#7C3AED" stroke-width="0.8" filter="url(#shadowCard)" class="card">
+      <animate attributeName="stroke" values="#7C3AED;#A78BFA;#7C3AED" dur="3s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Image Area -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="400" height="220" rx="20" fill="#1A1A1A"/>
+      <rect x="0" y="200" width="400" height="20" fill="url(#cardBg)"/>
+      
+      <!-- Project Icon -->
+      <g transform="translate(200, 110)">
+        <rect x="-30" y="-30" width="60" height="60" rx="16" fill="#7C3AED" fill-opacity="0.15"/>
+        <text x="0" y="12" font-family="'Inter', sans-serif" font-size="32" text-anchor="middle">📊</text>
+      </g>
+
+      <!-- Category Badge -->
+      <rect x="20" y="190" width="100" height="26" rx="13" fill="#7C3AED" fill-opacity="0.2"/>
+      <text x="70" y="207" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A78BFA" text-anchor="middle">Dashboard</text>
+    </g>
+
+    <!-- Tech Stack Tags -->
+    <g transform="translate(20, 240)">
+      <rect x="0" y="0" width="75" height="28" rx="14" fill="#7C3AED" fill-opacity="0.12" stroke="#7C3AED" stroke-width="0.5"/>
+      <text x="37" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">Next.js</text>
+
+      <rect x="85" y="0" width="85" height="28" rx="14" fill="#8B5CF6" fill-opacity="0.12" stroke="#8B5CF6" stroke-width="0.5"/>
+      <text x="127" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">TypeScript</text>
+
+      <rect x="180" y="0" width="85" height="28" rx="14" fill="#38BDF8" fill-opacity="0.12" stroke="#38BDF8" stroke-width="0.5"/>
+      <text x="222" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#7DD3FC" text-anchor="middle">Tailwind</text>
+    </g>
+
+    <!-- Title -->
+    <text x="20" y="310" font-family="'Inter', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Admin Dashboard</text>
+
+    <!-- Description -->
+    <text x="20" y="345" font-family="'Inter', sans-serif" font-size="13" fill="#A1A1AA">
+      <tspan x="20" dy="0">A comprehensive admin dashboard with</tspan>
+      <tspan x="20" dy="24">real-time analytics, user management,</tspan>
+      <tspan x="20" dy="24">and data visualization features.</tspan>
+      <tspan x="20" dy="24">Built with Next.js 14 and Tailwind CSS.</tspan>
+    </text>
+
+    <!-- Features List -->
+    <g transform="translate(20, 445)">
+      <circle cx="0" cy="6" r="3" fill="#7C3AED"/>
+      <text x="12" y="10" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Real-time data updates</text>
+
+      <circle cx="0" cy="26" r="3" fill="#7C3AED"/>
+      <text x="12" y="30" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Responsive design</text>
+
+      <circle cx="0" cy="46" r="3" fill="#7C3AED"/>
+      <text x="12" y="50" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Dark/Light mode support</text>
+    </g>
+
+    <!-- Links -->
+    <g transform="translate(20, 490)">
+      <text x="0" y="0" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#A78BFA" cursor="pointer">Live Demo →</text>
+      <text x="120" y="0" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#71717A" cursor="pointer">GitHub</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- PROJECT CARD 2                               -->
+  <!-- ============================================ -->
+  <g transform="translate(520, 140)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.45s" dur="0.5s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="520 160" to="520 140" begin="0.45s" dur="0.5s" fill="freeze"/>
+
+    <rect x="0" y="0" width="400" height="520" rx="20" fill="url(#cardBg)" stroke="#8B5CF6" stroke-width="0.8" filter="url(#shadowCard)" class="card">
+      <animate attributeName="stroke" values="#8B5CF6;#A78BFA;#8B5CF6" dur="3s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Image Area -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="400" height="220" rx="20" fill="#1A1A1A"/>
+      <rect x="0" y="200" width="400" height="20" fill="url(#cardBg)"/>
+      
+      <g transform="translate(200, 110)">
+        <rect x="-30" y="-30" width="60" height="60" rx="16" fill="#8B5CF6" fill-opacity="0.15"/>
+        <text x="0" y="12" font-family="'Inter', sans-serif" font-size="32" text-anchor="middle">📱</text>
+      </g>
+
+      <rect x="20" y="190" width="100" height="26" rx="13" fill="#8B5CF6" fill-opacity="0.2"/>
+      <text x="70" y="207" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A78BFA" text-anchor="middle">Mobile App</text>
+    </g>
+
+    <!-- Tech Stack Tags -->
+    <g transform="translate(20, 240)">
+      <rect x="0" y="0" width="95" height="28" rx="14" fill="#7C3AED" fill-opacity="0.12" stroke="#7C3AED" stroke-width="0.5"/>
+      <text x="47" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">React Native</text>
+
+      <rect x="105" y="0" width="75" height="28" rx="14" fill="#8B5CF6" fill-opacity="0.12" stroke="#8B5CF6" stroke-width="0.5"/>
+      <text x="142" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">Node.js</text>
+
+      <rect x="190" y="0" width="85" height="28" rx="14" fill="#38BDF8" fill-opacity="0.12" stroke="#38BDF8" stroke-width="0.5"/>
+      <text x="232" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#7DD3FC" text-anchor="middle">MongoDB</text>
+    </g>
+
+    <!-- Title -->
+    <text x="20" y="310" font-family="'Inter', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">E-Commerce App</text>
+
+    <!-- Description -->
+    <text x="20" y="345" font-family="'Inter', sans-serif" font-size="13" fill="#A1A1AA">
+      <tspan x="20" dy="0">A full-featured e-commerce mobile</tspan>
+      <tspan x="20" dy="24">application with payment integration,</tspan>
+      <tspan x="20" dy="24">product search, and user authentication.</tspan>
+      <tspan x="20" dy="24">Cross-platform with React Native.</tspan>
+    </text>
+
+    <!-- Features List -->
+    <g transform="translate(20, 445)">
+      <circle cx="0" cy="6" r="3" fill="#8B5CF6"/>
+      <text x="12" y="10" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Stripe payment integration</text>
+
+      <circle cx="0" cy="26" r="3" fill="#8B5CF6"/>
+      <text x="12" y="30" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Push notifications</text>
+
+      <circle cx="0" cy="46" r="3" fill="#8B5CF6"/>
+      <text x="12" y="50" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Offline support</text>
+    </g>
+
+    <!-- Links -->
+    <g transform="translate(20, 490)">
+      <text x="0" y="0" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#A78BFA" cursor="pointer">Live Demo →</text>
+      <text x="120" y="0" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#71717A" cursor="pointer">GitHub</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- PROJECT CARD 3                               -->
+  <!-- ============================================ -->
+  <g transform="translate(960, 140)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.6s" dur="0.5s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="960 160" to="960 140" begin="0.6s" dur="0.5s" fill="freeze"/>
+
+    <rect x="0" y="0" width="400" height="520" rx="20" fill="url(#cardBg)" stroke="#38BDF8" stroke-width="0.8" filter="url(#shadowCard)" class="card">
+      <animate attributeName="stroke" values="#38BDF8;#7DD3FC;#38BDF8" dur="3s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Image Area -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="400" height="220" rx="20" fill="#1A1A1A"/>
+      <rect x="0" y="200" width="400" height="20" fill="url(#cardBg)"/>
+      
+      <g transform="translate(200, 110)">
+        <rect x="-30" y="-30" width="60" height="60" rx="16" fill="#38BDF8" fill-opacity="0.15"/>
+        <text x="0" y="12" font-family="'Inter', sans-serif" font-size="32" text-anchor="middle">🎮</text>
+      </g>
+
+      <rect x="20" y="190" width="100" height="26" rx="13" fill="#38BDF8" fill-opacity="0.2"/>
+      <text x="70" y="207" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#7DD3FC" text-anchor="middle">Gaming Platform</text>
+    </g>
+
+    <!-- Tech Stack Tags -->
+    <g transform="translate(20, 240)">
+      <rect x="0" y="0" width="85" height="28" rx="14" fill="#7C3AED" fill-opacity="0.12" stroke="#7C3AED" stroke-width="0.5"/>
+      <text x="42" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">Next.js</text>
+
+      <rect x="95" y="0" width="95" height="28" rx="14" fill="#8B5CF6" fill-opacity="0.12" stroke="#8B5CF6" stroke-width="0.5"/>
+      <text x="142" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">Socket.io</text>
+
+      <rect x="200" y="0" width="80" height="28" rx="14" fill="#38BDF8" fill-opacity="0.12" stroke="#38BDF8" stroke-width="0.5"/>
+      <text x="240" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#7DD3FC" text-anchor="middle">Redis</text>
+    </g>
+
+    <!-- Title -->
+    <text x="20" y="310" font-family="'Inter', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">GameHub</text>
+
+    <!-- Description -->
+    <text x="20" y="345" font-family="'Inter', sans-serif" font-size="13" fill="#A1A1AA">
+      <tspan x="20" dy="0">A real-time gaming platform where</tspan>
+      <tspan x="20" dy="24">users can play multiplayer games,</tspan>
+      <tspan x="20" dy="24">chat with friends, and track scores.</tspan>
+      <tspan x="20" dy="24">Built with WebSocket technology.</tspan>
+    </text>
+
+    <!-- Features List -->
+    <g transform="translate(20, 445)">
+      <circle cx="0" cy="6" r="3" fill="#38BDF8"/>
+      <text x="12" y="10" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Real-time multiplayer</text>
+
+      <circle cx="0" cy="26" r="3" fill="#38BDF8"/>
+      <text x="12" y="30" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Live chat system</text>
+
+      <circle cx="0" cy="46" r="3" fill="#38BDF8"/>
+      <text x="12" y="50" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Leaderboard  rankings</text>
+    </g>
+
+    <!-- Links -->
+    <g transform="translate(20, 490)">
+      <text x="0" y="0" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#7DD3FC" cursor="pointer">Live Demo →</text>
+      <text x="120" y="0" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#71717A" cursor="pointer">GitHub</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- VIEW ALL PROJECTS BUTTON                     -->
+  <!-- ============================================ -->
+  <g transform="translate(620, 700)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.75s" dur="0.5s" fill="freeze"/>
+
+    <rect x="0" y="0" width="200" height="48" rx="24" fill="none" stroke="url(#purpleAccent)" stroke-width="1.5" cursor="pointer"/>
+    <text x="100" y="30" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#A78BFA" text-anchor="middle" cursor="pointer">
+      View All Projects →
+    </text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- DESIGN SPECS PANEL                           -->
+  <!-- ============================================ -->
+  <g transform="translate(80, 765)" opacity="0.5">
+    <text x="0" y="0" font-family="'Inter', sans-serif" font-size="10" fill="#52525B">SECTION: Featured Projects | 3-Column Grid | Card Size: 400×520px | Gap: 40px</text>
+  </g>
+
+</svg>

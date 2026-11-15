@@ -1,0 +1,297 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 680" width="1440" height="680">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgSection" x1="0" y1="0" x2="0" y2="100">
+      <stop offset="0%" stop-color="#121212"/>
+      <stop offset="100%" stop-color="#1A1A1A"/>
+    </linearGradient>
+
+    <!-- Purple Accent Gradient -->
+    <linearGradient id="purpleAccent" x1="0" y1="0" x2="100" y2="0">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+
+    <!-- Blue Accent Gradient -->
+    <linearGradient id="blueAccent" x1="0" y1="0" x2="100" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#7DD3FC"/>
+    </linearGradient>
+
+    <!-- Card Background -->
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="100">
+      <stop offset="0%" stop-color="#242424" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#1A1A1A" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Progress Bar Gradient -->
+    <linearGradient id="progressGrad" x1="0" y1="0" x2="100" y2="0">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glowPurple">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="shadowCard">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#7C3AED" flood-opacity="0.08"/>
+    </filter>
+
+    <filter id="tagGlow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#7C3AED" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- ============================================ -->
+  <!-- SECTION BACKGROUND                           -->
+  <!-- ============================================ -->
+  <rect width="1440" height="680" fill="url(#bgSection)"/>
+
+  <!-- Ambient Glows -->
+  <ellipse cx="720" cy="340" rx="500" ry="300" fill="#7C3AED" fill-opacity="0.03" filter="url(#glowPurple)"/>
+  <ellipse cx="200" cy="200" rx="250" ry="200" fill="#38BDF8" fill-opacity="0.02" filter="url(#glowPurple)"/>
+
+  <!-- ============================================ -->
+  <!-- SECTION HEADER                               -->
+  <!-- ============================================ -->
+  <g transform="translate(720, 50)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.6s" fill="freeze"/>
+    
+    <text x="0" y="0" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#A78BFA" text-anchor="middle" letter-spacing="2">TECHNICAL SKILLS</text>
+    
+    <text x="0" y="45" font-family="'Cal Sans', 'Inter', sans-serif" font-size="48" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.01">
+      مهارت‌های تخصصی
+    </text>
+    
+    <rect x="-40" y="65" width="80" height="3" rx="1.5" fill="url(#purpleAccent)"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- CATEGORY 1: FRONTEND                         -->
+  <!-- ============================================ -->
+  <g transform="translate(80, 150)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.5s" fill="freeze"/>
+
+    <!-- Category Header -->
+    <rect x="0" y="0" width="600" height="45" rx="10" fill="#1A1A1A" stroke="#7C3AED" stroke-width="0.8"/>
+    <text x="20" y="29" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#38BDF8">⚛️ Frontend Development</text>
+
+    <!-- Skills Grid -->
+    <g transform="translate(0, 60)">
+      
+      <!-- Skill 1: React -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="280" height="65" rx="10" fill="url(#cardBg)" stroke="#7C3AED" stroke-width="0.5" filter="url(#shadowCard)"/>
+        <text x="15" y="25" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">React</text>
+        <text x="15" y="48" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Library for building UIs</text>
+        
+        <!-- Progress Bar -->
+        <rect x="180" y="20" width="85" height="4" rx="2" fill="#2D2D2D"/>
+        <rect x="180" y="20" width="76" height="4" rx="2" fill="url(#progressGrad)"/>
+        <text x="270" y="25" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A78BFA">90%</text>
+      </g>
+
+      <!-- Skill 2: Next.js -->
+      <g transform="translate(300, 0)">
+        <rect x="0" y="0" width="280" height="65" rx="10" fill="url(#cardBg)" stroke="#8B5CF6" stroke-width="0.5" filter="url(#shadowCard)"/>
+        <text x="15" y="25" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Next.js</text>
+        <text x="15" y="48" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">React framework for production</text>
+        
+        <rect x="180" y="20" width="85" height="4" rx="2" fill="#2D2D2D"/>
+        <rect x="180" y="20" width="76" height="4" rx="2" fill="url(#progressGrad)"/>
+        <text x="270" y="25" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A78BFA">90%</text>
+      </g>
+
+      <!-- Skill 3: TypeScript -->
+      <g transform="translate(0, 80)">
+        <rect x="0" y="0" width="280" height="65" rx="10" fill="url(#cardBg)" stroke="#A78BFA" stroke-width="0.5" filter="url(#shadowCard)"/>
+        <text x="15" y="25" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">TypeScript</text>
+        <text x="15" y="48" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Typed JavaScript superset</text>
+        
+        <rect x="180" y="20" width="85" height="4" rx="2" fill="#2D2D2D"/>
+        <rect x="180" y="20" width="68" height="4" rx="2" fill="url(#progressGrad)"/>
+        <text x="270" y="25" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A78BFA">85%</text>
+      </g>
+
+      <!-- Skill 4: Tailwind CSS -->
+      <g transform="translate(300, 80)">
+        <rect x="0" y="0" width="280" height="65" rx="10" fill="url(#cardBg)" stroke="#38BDF8" stroke-width="0.5" filter="url(#shadowCard)"/>
+        <text x="15" y="25" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Tailwind CSS</text>
+        <text x="15" y="48" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Utility-first CSS framework</text>
+        
+        <rect x="180" y="20" width="85" height="4" rx="2" fill="#2D2D2D"/>
+        <rect x="180" y="20" width="76" height="4" rx="2" fill="url(#progressGrad)"/>
+        <text x="270" y="25" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A78BFA">90%</text>
+      </g>
+
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- CATEGORY 2: BACKEND                          -->
+  <!-- ============================================ -->
+  <g transform="translate(80, 360)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.5s" dur="0.5s" fill="freeze"/>
+
+    <!-- Category Header -->
+    <rect x="0" y="0" width="600" height="45" rx="10" fill="#1A1A1A" stroke="#8B5CF6" stroke-width="0.8"/>
+    <text x="20" y="29" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#A78BFA">🖥️ Backend Development</text>
+
+    <!-- Skills Grid -->
+    <g transform="translate(0, 60)">
+      
+      <!-- Skill 5: Node.js -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="280" height="65" rx="10" fill="url(#cardBg)" stroke="#7C3AED" stroke-width="0.5" filter="url(#shadowCard)"/>
+        <text x="15" y="25" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Node.js</text>
+        <text x="15" y="48" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">JavaScript runtime</text>
+        
+        <rect x="180" y="20" width="85" height="4" rx="2" fill="#2D2D2D"/>
+        <rect x="180" y="20" width="68" height="4" rx="2" fill="url(#progressGrad)"/>
+        <text x="270" y="25" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A78BFA">85%</text>
+      </g>
+
+      <!-- Skill 6: Python -->
+      <g transform="translate(300, 0)">
+        <rect x="0" y="0" width="280" height="65" rx="10" fill="url(#cardBg)" stroke="#8B5CF6" stroke-width="0.5" filter="url(#shadowCard)"/>
+        <text x="15" y="25" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Python</text>
+        <text x="15" y="48" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Versatile programming language</text>
+        
+        <rect x="180" y="20" width="85" height="4" rx="2" fill="#2D2D2D"/>
+        <rect x="180" y="20" width="60" height="4" rx="2" fill="url(#progressGrad)"/>
+        <text x="270" y="25" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A78BFA">75%</text>
+      </g>
+
+      <!-- Skill 7: REST API -->
+      <g transform="translate(0, 80)">
+        <rect x="0" y="0" width="280" height="65" rx="10" fill="url(#cardBg)" stroke="#A78BFA" stroke-width="0.5" filter="url(#shadowCard)"/>
+        <text x="15" y="25" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">REST API</text>
+        <text x="15" y="48" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">API design  integration</text>
+        
+        <rect x="180" y="20" width="85" height="4" rx="2" fill="#2D2D2D"/>
+        <rect x="180" y="20" width="76" height="4" rx="2" fill="url(#progressGrad)"/>
+        <text x="270" y="25" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A78BFA">90%</text>
+      </g>
+
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- RIGHT SIDE - TOOLS  DATABASES               -->
+  <!-- ============================================ -->
+  <g transform="translate(760, 150)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.5s" fill="freeze"/>
+
+    <!-- Category 3: Database -->
+    <rect x="0" y="0" width="600" height="45" rx="10" fill="#1A1A1A" stroke="#38BDF8" stroke-width="0.8"/>
+    <text x="20" y="29" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#7DD3FC">🗄️ Database  Tools</text>
+
+    <g transform="translate(0, 60)">
+      
+      <!-- Skill 8: PostgreSQL -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="280" height="65" rx="10" fill="url(#cardBg)" stroke="#7C3AED" stroke-width="0.5" filter="url(#shadowCard)"/>
+        <text x="15" y="25" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">PostgreSQL</text>
+        <text x="15" y="48" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Relational database</text>
+        
+        <rect x="180" y="20" width="85" height="4" rx="2" fill="#2D2D2D"/>
+        <rect x="180" y="20" width="68" height="4" rx="2" fill="url(#progressGrad)"/>
+        <text x="270" y="25" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A78BFA">85%</text>
+      </g>
+
+      <!-- Skill 9: MongoDB -->
+      <g transform="translate(300, 0)">
+        <rect x="0" y="0" width="280" height="65" rx="10" fill="url(#cardBg)" stroke="#8B5CF6" stroke-width="0.5" filter="url(#shadowCard)"/>
+        <text x="15" y="25" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">MongoDB</text>
+        <text x="15" y="48" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">NoSQL database</text>
+        
+        <rect x="180" y="20" width="85" height="4" rx="2" fill="#2D2D2D"/>
+        <rect x="180" y="20" width="60" height="4" rx="2" fill="url(#progressGrad)"/>
+        <text x="270" y="25" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A78BFA">75%</text>
+      </g>
+
+      <!-- Skill 10: Git -->
+      <g transform="translate(0, 80)">
+        <rect x="0" y="0" width="280" height="65" rx="10" fill="url(#cardBg)" stroke="#A78BFA" stroke-width="0.5" filter="url(#shadowCard)"/>
+        <text x="15" y="25" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Git  GitHub</text>
+        <text x="15" y="48" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Version control</text>
+        
+        <rect x="180" y="20" width="85" height="4" rx="2" fill="#2D2D2D"/>
+        <rect x="180" y="20" width="76" height="4" rx="2" fill="url(#progressGrad)"/>
+        <text x="270" y="25" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A78BFA">90%</text>
+      </g>
+
+      <!-- Skill 11: Docker -->
+      <g transform="translate(300, 80)">
+        <rect x="0" y="0" width="280" height="65" rx="10" fill="url(#cardBg)" stroke="#38BDF8" stroke-width="0.5" filter="url(#shadowCard)"/>
+        <text x="15" y="25" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Docker</text>
+        <text x="15" y="48" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Containerization</text>
+        
+        <rect x="180" y="20" width="85" height="4" rx="2" fill="#2D2D2D"/>
+        <rect x="180" y="20" width="52" height="4" rx="2" fill="url(#progressGrad)"/>
+        <text x="270" y="25" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A78BFA">70%</text>
+      </g>
+
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- SKILL TAGS CLOUD (Bottom)                    -->
+  <!-- ============================================ -->
+  <g transform="translate(80, 580)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.7s" dur="0.5s" fill="freeze"/>
+
+    <rect x="0" y="0" width="1280" height="80" rx="12" fill="#1A1A1A" stroke="#7C3AED" stroke-width="0.5"/>
+
+    <text x="20" y="25" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#71717A" letter-spacing="1">OTHER TECHNOLOGIES</text>
+
+    <!-- Tag Cloud -->
+    <g transform="translate(20, 40)">
+      <!-- Row 1 -->
+      <rect x="0" y="0" width="70" height="28" rx="14" fill="#7C3AED" fill-opacity="0.12" stroke="#7C3AED" stroke-width="0.5"/>
+      <text x="35" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">Redux</text>
+
+      <rect x="80" y="0" width="85" height="28" rx="14" fill="#8B5CF6" fill-opacity="0.12" stroke="#8B5CF6" stroke-width="0.5"/>
+      <text x="122" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">GraphQL</text>
+
+      <rect x="175" y="0" width="100" height="28" rx="14" fill="#A78BFA" fill-opacity="0.12" stroke="#A78BFA" stroke-width="0.5"/>
+      <text x="225" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">Jest (Testing)</text>
+
+      <rect x="285" y="0" width="90" height="28" rx="14" fill="#38BDF8" fill-opacity="0.12" stroke="#38BDF8" stroke-width="0.5"/>
+      <text x="330" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#7DD3FC" text-anchor="middle">Figma</text>
+
+      <rect x="385" y="0" width="80" height="28" rx="14" fill="#7C3AED" fill-opacity="0.12" stroke="#7C3AED" stroke-width="0.5"/>
+      <text x="425" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">VSCode</text>
+
+      <rect x="475" y="0" width="75" height="28" rx="14" fill="#8B5CF6" fill-opacity="0.12" stroke="#8B5CF6" stroke-width="0.5"/>
+      <text x="512" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">Linux</text>
+
+      <rect x="560" y="0" width="95" height="28" rx="14" fill="#A78BFA" fill-opacity="0.12" stroke="#A78BFA" stroke-width="0.5"/>
+      <text x="607" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">CI/CD</text>
+
+      <rect x="665" y="0" width="80" height="28" rx="14" fill="#38BDF8" fill-opacity="0.12" stroke="#38BDF8" stroke-width="0.5"/>
+      <text x="705" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#7DD3FC" text-anchor="middle">Vercel</text>
+
+      <rect x="755" y="0" width="95" height="28" rx="14" fill="#7C3AED" fill-opacity="0.12" stroke="#7C3AED" stroke-width="0.5"/>
+      <text x="802" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">Prisma ORM</text>
+
+      <rect x="860" y="0" width="100" height="28" rx="14" fill="#8B5CF6" fill-opacity="0.12" stroke="#8B5CF6" stroke-width="0.5"/>
+      <text x="910" y="19" font-family="'Inter', sans-serif" font-size="11" fill="#A78BFA" text-anchor="middle">Zustand</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- DESIGN SPECS PANEL                           -->
+  <!-- ============================================ -->
+  <g transform="translate(80, 670)" opacity="0.5">
+    <text x="0" y="0" font-family="'Inter', sans-serif" font-size="10" fill="#52525B">SECTION: Technical Skills | 2-Column Layout | Categories: Frontend | Backend | Database/Tools</text>
+  </g>
+
+</svg>

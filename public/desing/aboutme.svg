@@ -1,0 +1,258 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 720" width="1440" height="720">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgSection" x1="0" y1="0" x2="0" y2="100">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#121212"/>
+    </linearGradient>
+
+    <!-- Purple Accent Gradient -->
+    <linearGradient id="purpleAccent" x1="0" y1="0" x2="100" y2="0">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+
+    <!-- Blue Accent Gradient -->
+    <linearGradient id="blueAccent" x1="0" y1="0" x2="100" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#7DD3FC"/>
+    </linearGradient>
+
+    <!-- Card Background -->
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="100">
+      <stop offset="0%" stop-color="#242424" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#1A1A1A" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Timeline Line Gradient -->
+    <linearGradient id="timelineLine" x1="0" y1="0" x2="0" y2="100">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glowPurple">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="shadowCard">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#7C3AED" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- ============================================ -->
+  <!-- SECTION BACKGROUND                           -->
+  <!-- ============================================ -->
+  <rect width="1440" height="720" fill="url(#bgSection)"/>
+
+  <!-- Ambient Glows -->
+  <ellipse cx="200" cy="360" rx="300" ry="250" fill="#7C3AED" fill-opacity="0.04" filter="url(#glowPurple)"/>
+  <ellipse cx="1240" cy="400" rx="280" ry="200" fill="#38BDF8" fill-opacity="0.03" filter="url(#glowPurple)"/>
+
+  <!-- ============================================ -->
+  <!-- SECTION HEADER                               -->
+  <!-- ============================================ -->
+  <g transform="translate(720, 60)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.6s" fill="freeze"/>
+    
+    <text x="0" y="0" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#A78BFA" text-anchor="middle" letter-spacing="2">ABOUT ME</text>
+    
+    <text x="0" y="50" font-family="'Cal Sans', 'Inter', sans-serif" font-size="48" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.01">
+      درباره من و مسیر حرفه‌ای
+    </text>
+    
+    <rect x="-40" y="70" width="80" height="3" rx="1.5" fill="url(#purpleAccent)"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LEFT SIDE - BIOGRAPHY CARD                   -->
+  <!-- ============================================ -->
+  <g transform="translate(80, 160)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.6s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="80 180" to="80 160" begin="0.4s" dur="0.6s" fill="freeze"/>
+
+    <!-- Main Card -->
+    <rect x="0" y="0" width="520" height="480" rx="20" fill="url(#cardBg)" stroke="#7C3AED" stroke-width="0.8" filter="url(#shadowCard)"/>
+
+    <!-- Avatar / Icon Area -->
+    <g transform="translate(40, 40)">
+      <rect x="0" y="0" width="80" height="80" rx="20" fill="#1A1A1A" stroke="#8B5CF6" stroke-width="1.5"/>
+      <text x="40" y="50" font-family="'Inter', sans-serif" font-size="36" text-anchor="middle">👨‍💻</text>
+      
+      <!-- Status Badge -->
+      <rect x="60" y="60" width="50" height="20" rx="10" fill="#7C3AED" fill-opacity="0.15"/>
+      <circle cx="70" cy="70" r="4" fill="#38BDF8">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="82" y="74" font-family="'Inter', sans-serif" font-size="9" fill="#A78BFA">Active</text>
+    </g>
+
+    <!-- Name & Title -->
+    <g transform="translate(140, 40)">
+      <text x="0" y="25" font-family="'Cal Sans', 'Inter', sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">AmirHossein Dosti</text>
+      <text x="0" y="55" font-family="'Inter', sans-serif" font-size="16" fill="url(#blueAccent)">Senior Frontend Engineer</text>
+      
+      <!-- Location -->
+      <g transform="translate(0, 75)">
+        <text x="0" y="12" font-family="'Inter', sans-serif" font-size="13" fill="#71717A">📍 Tehran, Iran</text>
+        <text x="140" y="12" font-family="'Inter', sans-serif" font-size="13" fill="#71717A">📅 Available for work</text>
+      </g>
+    </g>
+
+    <!-- Divider -->
+    <rect x="40" y="150" width="440" height="1" fill="#7C3AED" opacity="0.15"/>
+
+    <!-- Biography Text -->
+    <g transform="translate(40, 180)">
+      <text x="0" y="0" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#A78BFA">📖 BIOGRAPHY</text>
+      
+      <text x="0" y="35" font-family="'Inter', sans-serif" font-size="15" fill="#A1A1AA" line-height="1.6">
+        <tspan x="0" dy="0">I'm a passionate frontend developer with over 5 years</tspan>
+        <tspan x="0" dy="26">of experience building modern web applications.</tspan>
+        <tspan x="0" dy="26">I specialize in Next.js, React, and TypeScript,</tspan>
+        <tspan x="0" dy="26">creating scalable, performant, and beautiful interfaces.</tspan>
+        <tspan x="0" dy="26"></tspan>
+        <tspan x="0" dy="26">My goal is to bridge the gap between design and</tspan>
+        <tspan x="0" dy="26">development, delivering exceptional user experiences</tspan>
+        <tspan x="0" dy="26">that make a difference.</tspan>
+      </text>
+    </g>
+
+    <!-- Quote / Motto -->
+    <g transform="translate(40, 410)">
+      <rect x="0" y="0" width="440" height="50" rx="10" fill="#1A1A1A" stroke="#7C3AED" stroke-width="0.5"/>
+      <text x="220" y="30" font-family="'Inter', sans-serif" font-size="13" fill="#71717A" text-anchor="middle" font-style="italic">
+        "Clean code, clean design, clean solutions."
+      </text>
+    </g>
+
+  </g>
+
+  <!-- ============================================ -->
+  <!-- RIGHT SIDE - TIMELINE / CAREER JOURNEY       -->
+  <!-- ============================================ -->
+  <g transform="translate(660, 160)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.6s" dur="0.6s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="660 180" to="660 160" begin="0.6s" dur="0.6s" fill="freeze"/>
+
+    <text x="0" y="25" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#A78BFA">💼 CAREER JOURNEY</text>
+
+    <!-- Timeline Container -->
+    <g transform="translate(0, 50)">
+      
+      <!-- Timeline Vertical Line -->
+      <line x1="24" y1="0" x2="24" y2="430" stroke="url(#timelineLine)" stroke-width="2" stroke-opacity="0.3"/>
+
+      <!-- Timeline Item 1 - Current -->
+      <g transform="translate(0, 0)">
+        <!-- Dot -->
+        <circle cx="24" cy="15" r="8" fill="#7C3AED" filter="url(#glowPurple)">
+          <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="24" cy="15" r="3" fill="#FFFFFF"/>
+        
+        <!-- Content -->
+        <rect x="55" y="0" width="550" height="110" rx="12" fill="#242424" stroke="#7C3AED" stroke-width="0.5"/>
+        
+        <text x="75" y="28" font-family="'Inter', sans-serif" font-size="13" fill="#38BDF8" font-weight="600">2023 - PRESENT</text>
+        <text x="75" y="52" font-family="'Inter', sans-serif" font-size="17" font-weight="600" fill="#FFFFFF">Senior Frontend Engineer</text>
+        <text x="75" y="75" font-family="'Inter', sans-serif" font-size="13" fill="#A1A1AA">TechRahnama • Tehran, Iran</text>
+        <text x="75" y="95" font-family="'Inter', sans-serif" font-size="12" fill="#71717A">Leading frontend team, architecting Next.js applications</text>
+      </g>
+
+      <!-- Timeline Item 2 -->
+      <g transform="translate(0, 130)">
+        <circle cx="24" cy="15" r="8" fill="#8B5CF6"/>
+        <circle cx="24" cy="15" r="2.5" fill="#FFFFFF"/>
+        
+        <rect x="55" y="0" width="550" height="110" rx="12" fill="#242424" stroke="#8B5CF6" stroke-width="0.5"/>
+        
+        <text x="75" y="28" font-family="'Inter', sans-serif" font-size="13" fill="#A78BFA" font-weight="600">2021 - 2023</text>
+        <text x="75" y="52" font-family="'Inter', sans-serif" font-size="17" font-weight="600" fill="#FFFFFF">Frontend Developer</text>
+        <text x="75" y="75" font-family="'Inter', sans-serif" font-size="13" fill="#A1A1AA">FANAP • Tehran, Iran</text>
+        <text x="75" y="95" font-family="'Inter', sans-serif" font-size="12" fill="#71717A">Built responsive web apps with React and TypeScript</text>
+      </g>
+
+      <!-- Timeline Item 3 -->
+      <g transform="translate(0, 260)">
+        <circle cx="24" cy="15" r="8" fill="#A78BFA"/>
+        <circle cx="24" cy="15" r="2.5" fill="#FFFFFF"/>
+        
+        <rect x="55" y="0" width="550" height="110" rx="12" fill="#242424" stroke="#A78BFA" stroke-width="0.5"/>
+        
+        <text x="75" y="28" font-family="'Inter', sans-serif" font-size="13" fill="#A78BFA" font-weight="600">2019 - 2021</text>
+        <text x="75" y="52" font-family="'Inter', sans-serif" font-size="17" font-weight="600" fill="#FFFFFF">Junior Web Developer</text>
+        <text x="75" y="75" font-family="'Inter', sans-serif" font-size="13" fill="#A1A1AA">Freelance • Remote</text>
+        <text x="75" y="95" font-family="'Inter', sans-serif" font-size="12" fill="#71717A">Developed websites and web applications for clients</text>
+      </g>
+
+      <!-- Timeline Item 4 - Education -->
+      <g transform="translate(0, 390)">
+        <circle cx="24" cy="15" r="8" fill="#38BDF8"/>
+        <circle cx="24" cy="15" r="2.5" fill="#FFFFFF"/>
+        
+        <rect x="55" y="0" width="550" height="90" rx="12" fill="#242424" stroke="#38BDF8" stroke-width="0.5"/>
+        
+        <text x="75" y="28" font-family="'Inter', sans-serif" font-size="13" fill="#7DD3FC" font-weight="600">2015 - 2019</text>
+        <text x="75" y="52" font-family="'Inter', sans-serif" font-size="17" font-weight="600" fill="#FFFFFF">B.Sc. Computer Engineering</text>
+        <text x="75" y="75" font-family="'Inter', sans-serif" font-size="13" fill="#A1A1AA">Azad University • Tehran, Iran</text>
+      </g>
+
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- STATS BAR (Bottom)                           -->
+  <!-- ============================================ -->
+  <g transform="translate(80, 660)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.8s" dur="0.5s" fill="freeze"/>
+
+    <rect x="0" y="0" width="1280" height="1" fill="#7C3AED" opacity="0.15"/>
+
+    <g transform="translate(0, 20)">
+      <!-- Stat 1 -->
+      <g transform="translate(0, 0)">
+        <text x="0" y="0" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="#A78BFA">5+</text>
+        <text x="0" y="25" font-family="'Inter', sans-serif" font-size="12" fill="#71717A">Years Experience</text>
+      </g>
+
+      <!-- Stat 2 -->
+      <g transform="translate(200, 0)">
+        <text x="0" y="0" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="#A78BFA">30+</text>
+        <text x="0" y="25" font-family="'Inter', sans-serif" font-size="12" fill="#71717A">Projects Completed</text>
+      </g>
+
+      <!-- Stat 3 -->
+      <g transform="translate(400, 0)">
+        <text x="0" y="0" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="#A78BFA">50+</text>
+        <text x="0" y="25" font-family="'Inter', sans-serif" font-size="12" fill="#71717A">Happy Clients</text>
+      </g>
+
+      <!-- Stat 4 -->
+      <g transform="translate(600, 0)">
+        <text x="0" y="0" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="#38BDF8">24/7</text>
+        <text x="0" y="25" font-family="'Inter', sans-serif" font-size="12" fill="#71717A">Support Available</text>
+      </g>
+
+      <!-- Stat 5 -->
+      <g transform="translate(800, 0)">
+        <text x="0" y="0" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="#A78BFA">100%</text>
+        <text x="0" y="25" font-family="'Inter', sans-serif" font-size="12" fill="#71717A">Client Satisfaction</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- DESIGN SPECS PANEL                           -->
+  <!-- ============================================ -->
+  <g transform="translate(80, 695)" opacity="0.6">
+    <text x="0" y="0" font-family="'Inter', sans-serif" font-size="10" fill="#52525B">SECTION: About + Career Journey | 2-Column Layout | Left: Biography Card | Right: Timeline</text>
+  </g>
+
+</svg>
