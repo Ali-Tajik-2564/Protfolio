@@ -1,22 +1,15 @@
 @import "tailwindcss";
-@font-face {
-  font-family: 'Rastin';
-  src: url('/fonts/Digi_Rastin_Bold.ttf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face {
   font-family: 'Rastin';
-  src: url('/fonts/Digi_Rastin_Bold.otf') format('opentype');
+  src: url('/fonts/Digi_Rastin_Bold.otf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Aonic-Thin';
-  src: url('/fonts/َAonic-Thin.ttf') format('truetype');
+  src: url('/fonts/Aonic-Thin.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -45,15 +38,16 @@
 
 @theme inline {
 
-  --charcoal-dark: var(--charcoal-dark);
-  --charcoal-medium: var(--charcoal-medium);
-  --charcoal-light: var(--charcoal-light);
-  --blue-main: var(--blue-main);
-  --blue-soft: var(--blue-soft);
-  --blue-pale: var(--blue-pale);
-  --purple-deep: var(--purple-deep);
-  --purple-main: var(--purple-main);
-  --purple-light: var(--purple-light);
+  --charcoal-dark: #1A1A1A ;
+  
+  --charcoal-medium: #242424;
+  --charcoal-light: #2d2d2d;
+  --blue-main: #38BDF8;
+  --blue-soft: #7FF3Fc;
+  --blue-pale: #BAE6Fd;
+  --purple-deep: #4C1D95;
+  --purple-main: #7C3AeD;
+  --purple-light: #A78BFA;
   --Aonic : "Aonic-Regular","Aonic-Thin" ,sans-serif ; 
   --Rastin: "Rastin" ,sans-serif; 
  
